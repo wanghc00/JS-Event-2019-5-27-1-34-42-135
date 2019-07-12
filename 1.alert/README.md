@@ -1,5 +1,5 @@
 ## 要求 
-    
+
 - 补充以下HTML，实现点击某一个数字可以alert出该数字。
 
 ```html
@@ -22,8 +22,13 @@
   </ul>
   
   <script>
-     // write your code here 
-     // ......
+     var item = document.getElementsByTagName("li");
+	 for (var i=0;i<item.length;i++){
+		item[i].index=i;
+		item[i].onclick=function(){
+			alert(this.index+1);
+		}
+	 }
   </script>
   </body>
   </html>
